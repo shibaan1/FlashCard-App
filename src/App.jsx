@@ -26,7 +26,24 @@ function App() {
 
   return (
     <div>
-      <h1>FLASH CARD APP</h1>
+      
+      <header>
+
+        <h1>FLASH CARD APP</h1>
+
+        <select >
+          <option value="ALL">ALL</option>
+          <option value="JavaScript">javascript</option>
+          <option value="React">react</option>
+          <option value="HTML">HTML</option>
+          </select>
+
+        <button>shuffle</button>
+        <button>add Card</button>
+      </header>
+
+
+      
     </div>
   )
 }
