@@ -1,8 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
 import './App.css'
+
+[
+{id:1 , category:'javascript' , question: '...' , answer:'...' , isknown: true},
+{id:2 , category:'HTML' , question: '...' , answer:'...' , isknown: false},
+{id:3 , category:'javascript' , question: '...' , answer:'...' , isknown: true},
+{id:4 , category:'React' , question: '...' , answer:'...' , isknown: false}
+]
 
 function App() {
   const [count, setCount] = useState(0)
