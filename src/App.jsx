@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div>
-      
+
       <header>
 
         <h1>FLASH CARD APP</h1>
@@ -36,14 +36,61 @@ function App() {
           <option value="JavaScript">javascript</option>
           <option value="React">react</option>
           <option value="HTML">HTML</option>
-          </select>
+        </select>
 
         <button>shuffle</button>
         <button>add Card</button>
       </header>
 
 
-      
+      <main>
+
+        <p>Card 1 of 9 | ★ 2 known</p>
+        <div>
+          <p>What is JSX?</p>
+        </div>
+
+        <div>
+          <span>
+            <button>&larr; prev</button>
+          </span>
+
+          <span>
+            <button>✓ Known</button>
+            <button>✗ Unknown</button>
+          </span>
+
+          <span>
+            <button>&rarr; next</button>
+          </span>
+        </div>
+
+      </main>
+
+
+      <section>
+
+        <h2>ADD NEW CARD</h2>
+
+        <form >
+
+          <select>
+            <option value="JavaScript">javascript</option>
+            <option value="HTML">html</option>
+            <option value="React">react</option>
+          </select>
+
+          <label>question</label>
+          <input type="text" placeholder='enter question' />
+
+          <label>answer</label>
+          <input type="text" placeholder='enter answer' />
+
+          <button>Add card</button>
+        </form>
+
+      </section>
+
     </div>
   )
 }
