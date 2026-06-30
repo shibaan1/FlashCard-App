@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({displayCard}) => {
+const {id ,category ,question , answer , isKnown} =displayCard
   return (
     <div>
-      card
+      
+      <p>{question}</p>
     </div>
   )
 }

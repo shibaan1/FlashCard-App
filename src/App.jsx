@@ -27,14 +27,18 @@ const CardData = [
 
 function App() {
 
+  const [cards, setCards] = useState(CardData)
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isFlipped, setIsFlipped] = useState(false)
+
   return (
     <div>
 
-<Header />
-<Card />
-<Navigation />
-<AddCard />
-      
+      <Header />
+      <Card displayCard={cards[currentIndex]} />
+      <Navigation />
+      <AddCard />
+
     </div>
   )
 }
