@@ -31,12 +31,39 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFlipped, setIsFlipped] = useState(false)
 
+  function handleFlip() {
+
+    setIsFlipped(!isFlipped)
+
+  }
+
+  function handleNext() {
+    setCurrentIndex((currentIndex + 1) % cards.length)
+    setIsFlipped(false)
+
+  }
+
+  function handlePrev() {
+
+    if (currentIndex === 0) {
+      setCurrentIndex(cards.length - 1)
+      setIsFlipped(false)
+
+    }
+
+    else {
+      setCurrentIndex(currentIndex - 1)
+      setIsFlipped(false)
+    }
+  }
+
+
   return (
     <div>
 
       <Header />
-      <Card displayCard={cards[currentIndex]} />
-      <Navigation />
+      <Card displayCard={cards[currentIndex]} flipped={isFlipped} onFlip={handleFlip} />
+      <Navigation onNext={handleNext} onPrev={handlePrev} currentCard={currentIndex} totalCard={cards.length} knownCount={cards.filter((card) => card.isKnown).length} />
       <AddCard />
 
     </div>

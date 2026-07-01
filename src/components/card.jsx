@@ -1,11 +1,18 @@
 import React from 'react'
 
-const Card = ({displayCard}) => {
-const {id ,category ,question , answer , isKnown} =displayCard
+const Card = ({displayCard , flipped , onFlip}) => {
+const {id ,category ,question , answer , isKnown} = displayCard
   return (
-    <div>
+    <div onClick={onFlip}>
+    {
+        flipped ? (
+        <p>{answer}</p>
+    ):(
+        <p>{question}</p>
+    )
+    }
       
-      <p>{question}</p>
+     
     </div>
   )
 }
